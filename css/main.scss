@@ -347,3 +347,96 @@
   [hidden] {
     display: none;
   }
+
+
+// Colors
+$bg-color: #f9f9f9;
+$dot-color: #eee;
+
+// Dimensions
+$dot-size: 2px;
+$dot-space: 22px;
+
+/* Define the "system" font family */
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+body {
+  font-family: "system";
+	background:
+		linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+		linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+		$dot-color;
+	background-size: $dot-space $dot-space;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+a {
+  color: #007ACE;
+  text-decoration: none;
+}
+
+a:not(:last-child)::after {
+    display: inline-block;
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: #333;
+    border-radius: 50%;
+    
+  }
+
+.card {
+  min-width: 300px;
+  max-width: 40%;
+  background-color: #eee;
+  padding: 2rem;
+  padding-bottom: 2.57rem;
+}
+
+.name {
+  margin: 0;
+}
+
+.pronunciation {
+  display: flex;
+  
+  > p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+  
+  .phoenetic {
+    margin-left: 0.25rem;
+  }
+}
+
+.definition {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+.links {
+  padding-top: 1.5rem;
+  
+  > a:not(:last-child) {
+    position: relative;
+    margin-right: 1.5rem;
+    
+    &::after {
+      position: absolute;
+      top: 35%;
+      right: -1rem;
+    }
+  }
+}
