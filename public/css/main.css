@@ -367,8 +367,8 @@ a:not(:last-child)::after {
   .card {
     display: flex;
     flex-direction: column;
-    height: 82%;
-    width: 70%; }
+    height: 82vh;
+    width: 70vw; }
   .links {
     display: inline-flex;
     justify-content: center;
