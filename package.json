@@ -1,0 +1,11 @@
+{
+  "name": "aman-biswas",
+  "version": "0.0.1",
+  "description": "Aman Biswas' personal website",
+  "scripts": {
+    "sass": "node-sass -w assets/css/ -o public/css/"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
